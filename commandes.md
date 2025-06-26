@@ -26,3 +26,28 @@
 
 - **Syntaxe**: `on: <event_name>`
 - **Description**: GitHub Actions supporte une variété d'autres événements, tels que `issues`, `release`, et `fork`. Chaque type d'événement permet de déclencher des workflows pour des cas d'usage spécifiques, renforçant l'intégration et l'automatisation dans l'écosystème GitHub.
+
+## Options de déclencheur d'événements
+
+### [pull_request](#pull-request)
+
+- `assigned` || `unassigned`
+- `labeled` || `unlabeled`
+- `opened`
+- `edited`
+- `closed`
+- `reopened`
+- `synchronize`
+- `converted_to_draft`
+- `locked` || `unlocked`
+- `enqueued` || `dequeued`
+- `milestoned` || `demilestoned`
+- `ready_for_review`
+- `review_requested` || `review_request_removed`
+- `auto_merge_enabled` || `auto_merge_disabled`
+
+```yaml
+on:
+  pull_request:
+    types: [edited]
+```
